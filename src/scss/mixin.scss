@@ -1,0 +1,6 @@
+@mixin transition-settings($delay: '150', $duration: '300', $easy: 'in-out') {
+	@apply delay-#{$delay} duration-#{$duration} ease-#{$easy} transition-all;
+}
+@mixin card-function() {
+	@apply rounded-[30px] bg-lightWhite p-5  md:px-8 md:py-6 lg:justify-between xl:px-14 xl:py-12;
+}

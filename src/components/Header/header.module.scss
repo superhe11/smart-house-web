@@ -1,0 +1,49 @@
+@mixin list_item($just, $gap) {
+	@apply #{$just} gap-x-#{$gap} flex  items-center text-mainGray;
+}
+
+@mixin flex_basic(
+	$flex-direction: 'row',
+	$gap: 'x-2',
+	$just: 'justify-normal'
+) {
+	@apply flex-#{$flex-direction} gap-#{$gap}  #{$just} flex;
+	@content;
+}
+
+.header {
+	@apply z-50 my-4 items-center text-sm font-semibold text-mainGray;
+
+	@include flex_basic('row', '3', 'justify-between');
+
+	&_phone {
+		@apply hidden items-center gap-x-3 lg:flex;
+	}
+
+	&_list {
+		@include flex_basic('row') {
+			@apply xl:gap-x-7.5;
+		}
+		& > li {
+			@include list_item('justify-between', '2');
+		}
+	}
+}
+
+.burger {
+	@apply container absolute -top-10 left-0 z-50 h-full  min-h-screen w-full  bg-white px-[10px] pt-10 lg:px-5;
+
+	&_header {
+		@include flex-basic('row', '2', 'justify-between') {
+			@apply py-[10px];
+		}
+	}
+
+	&_list {
+		@include flex_basic('col', 'y-4');
+		& > li {
+			@include list_item('justify-start', '1');
+			@apply text-base;
+		}
+	}
+}

@@ -1,0 +1,27 @@
+@import '/src/scss/mixin.scss';
+
+.app_card {
+	@apply relative h-96 w-full overflow-hidden rounded-3xl p-5 lg:w-2/5;
+
+	&_heading {
+		@apply text-2xl font-bold leading-9;
+	}
+
+	&_body {
+		@apply mt-3 text-sm;
+	}
+
+	&_bg_img {
+		@include transition-settings('100', '300');
+		@apply absolute left-0 top-0 h-full w-full scale-110;
+	}
+
+	&_phone {
+		@apply absolute right-5 top-44;
+	}
+
+	&:hover .app_card_bg_img {
+		@include transition-settings('100', '300');
+		@apply scale-100 opacity-60;
+	}
+}

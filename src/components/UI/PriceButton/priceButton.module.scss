@@ -1,0 +1,34 @@
+@import '/src/scss/mixin.scss';
+
+.price_button {
+	@apply flex h-[80px] w-[211px] items-center gap-4 rounded-full border border-mainGray bg-mainGray py-[10px] pl-[10px] pr-[22px];
+
+	& > img {
+		@apply z-10;
+
+		@include transition-settings();
+	}
+
+	& > p {
+		@include transition-settings('300', '300');
+	}
+
+	&:hover {
+		& > img {
+			@apply translate-x-[130px] -rotate-45;
+
+			@include transition-settings('75', '300');
+		}
+
+		& > p {
+			@apply -translate-x-14;
+
+			@include transition-settings('200', '[250ms]');
+		}
+	}
+
+	&:active {
+		@extend :hover;
+		@apply border-mainGreen bg-mainGreen;
+	}
+}

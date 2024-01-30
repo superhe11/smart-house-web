@@ -1,0 +1,15 @@
+.dialog_card {
+	background: linear-gradient(
+		94deg,
+		rgba(188, 102, 255, 0.3) 0%,
+		rgba(227, 114, 255, 0.3) 30.33%,
+		rgba(201, 114, 255, 0.3) 60.42%,
+		rgba(255, 114, 114, 0.3) 94.27%
+	);
+
+	@apply hidden md:block;
+}
+
+.dialog_card:nth-child(5) {
+	@apply hidden lg:block;
+}

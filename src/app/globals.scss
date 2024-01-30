@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--swiper-pagination-bullet: black;
+}
+.background {
+	background-color: #2f2f2f;
+}
+
+html {
+	--scroll-behavior: smooth !important;
+	scroll-behavior: smooth !important;
+}
+
+.swiper-pagination-bullet {
+}
+
+.swiper-pagination-bullet-active {
+	--swiper-pagination-color: black;
+	width: 20px;
+}
+
+@layer components {
+	.button-price {
+		@apply rounded-xl bg-mainGray px-7 py-2 text-white;
+
+		&:hover {
+			@apply bg-[#2a2a2a];
+		}
+
+		&:active {
+			@apply bg-lightBlue;
+		}
+	}
+
+	.guarantee_image_box {
+		@apply absolute top-10 -z-30 w-full scale-150 sm:-top-24 sm:rotate-90 md:-top-10 lg:top-0 lg:rotate-0 lg:scale-105;
+	}
+
+	.automaticall_card {
+		@apply mt-3 rounded-2xl bg-white/30 backdrop-blur-md;
+
+		&_little {
+			@apply rounded-xl bg-white/10 px-2 py-1 text-sm font-medium;
+		}
+	}
+
+	.gradient_dark::before {
+		background: linear-gradient(
+				180deg,
+				rgba(0, 0, 0, 0) 26.75%,
+				rgba(0, 0, 0, 0.7) 100%
+			),
+			lightgray 0px -50.533px / 100% 108.975% no-repeat;
+	}
+
+	.heading {
+		@apply w-full text-white;
+	}
+
+	.gradient_bg {
+		background: linear-gradient(
+				146deg,
+				rgba(0, 240, 255, 0) 48.45%,
+				#00b2ff 88.9%
+			),
+			linear-gradient(233deg, rgba(255, 153, 0, 0) 57.12%, #f90 92.88%);
+		opacity: 0.2;
+	}
+
+	.background_form {
+		border-radius: 30px;
+		background: linear-gradient(
+				295deg,
+				rgba(0, 240, 255, 0) 39.93%,
+				rgba(0, 178, 255, 0.3) 98.3%
+			),
+			linear-gradient(
+				88deg,
+				rgba(255, 153, 0, 0) 32.28%,
+				rgba(255, 153, 0, 0.3) 102.7%
+			),
+			#e8e8e8;
+		backdrop-filter: blur(11px);
+	}
+
+	.radial_gradient {
+		border-radius: 1000px;
+		background: radial-gradient(
+			50% 50% at 50% 50%,
+			rgba(170, 24, 221, 0.15) 0%,
+			rgba(189, 0, 255, 0) 100%
+		);
+		filter: blur(150.5px);
+	}
+
+	.not_found_gradient {
+		opacity: 0.2;
+		background: linear-gradient(
+				146deg,
+				rgba(0, 240, 255, 0) 48.45%,
+				rgba(0, 178, 255, 0.3) 88.9%
+			),
+			linear-gradient(
+				233deg,
+				rgba(255, 153, 0, 0) 57.12%,
+				rgba(255, 153, 0, 0.3) 92.88%
+			);
+	}
+
+	.heading_medium {
+		@apply text-3xl font-bold text-zinc-800 md:text-5xl;
+	}
+
+	.form_input {
+		@apply rounded-lg bg-white p-4 text-sm outline-none;
+
+		&:active,
+		&:focus {
+			@apply border-2 border-[#A4A4A4];
+			box-shadow: none;
+		}
+	}
+
+	.switch-gradient {
+		background: linear-gradient(
+				83deg,
+				#fbfeff 9.09%,
+				rgba(255, 255, 255, 0) 53.18%
+			),
+			lightgray 0% / cover no-repeat;
+	}
+
+	.bg-showroom-sensor {
+		border-radius: 30px;
+		background: linear-gradient(
+			289deg,
+			rgba(88, 227, 101, 0.3) -3.16%,
+			rgba(213, 255, 143, 0.3) 70.48%,
+			rgba(247, 255, 109, 0.3) 106.45%
+		);
+	}
+
+	.bg-showroom-lamp {
+		border-radius: 30px;
+		background: linear-gradient(
+			299deg,
+			rgba(249, 197, 171, 0.5) 18.04%,
+			rgba(255, 250, 234, 0.5) 95.08%
+		);
+	}
+}

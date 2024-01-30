@@ -1,0 +1,35 @@
+@import '/src/scss/mixin.scss';
+.card {
+	@apply relative overflow-hidden;
+	@include card-function();
+
+	&_h4 {
+		@apply text-2xl font-bold lg:text-4xl;
+	}
+
+	&_main_image {
+		@apply absolute right-0 top-0 h-[138px] w-[202px] opacity-50  md:-top-16 md:h-[460px] md:w-[540px] md:opacity-30;
+	}
+
+	&_list {
+		& > ul {
+			@apply mt-2;
+
+			& > li {
+				@apply text-sm leading-[21px] text-textGray lg:text-base;
+			}
+		}
+	}
+	& > ul > li {
+		@apply text-textGray;
+	}
+}
+
+.main_title {
+	@extend .card_h4;
+}
+
+.card_secondary {
+	@extend .card;
+	@apply -z-20 min-h-[340px] w-full;
+}
